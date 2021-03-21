@@ -1,0 +1,1 @@
+print ("soy el fichero adios.py")
