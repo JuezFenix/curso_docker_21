@@ -25,10 +25,13 @@ Creación de contenedores
 Diseño de una imagen basada en ubuntu, que copia ficheros python que ejecutan un servidor Flask y exponen una API con la uri /hola para saludar con el nombre indicado en la variable de entorno MI_NOMBRE.
 
 Construcción de la imagen
+
 `docker build -t armm_ejercicio3 ejercicios/ejercicio_3`
 
 Cración de contenedores
+
 `docker run -p 8080:8080 armm_ejercicio3`
 
 Url para probar la API
+
 `http:\\localhost:8080/hola`
