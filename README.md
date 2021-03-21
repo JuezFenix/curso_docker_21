@@ -5,3 +5,6 @@ Documentacion y ejercicios del curso Docker 21
 
 ### Ejercicio 1
 Creación de una imagen basada en Ubuntu 20.04, instalarle Apache2 limpiar el execeso de información y exponer el puerto 80.
+
+
+`docker build -t armm_ejercicio1 ejercicios/ejercicio_1/`
