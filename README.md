@@ -18,4 +18,5 @@ Creación de contenedores
 Docker compose que descarga y generar un contendor Apache2 y otro contenedor MySql y activa la conexión entre ellos.
 
 Creación de contenedores
+
 `docker-compose up`
