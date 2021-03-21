@@ -35,3 +35,14 @@ Cración de contenedores
 Url para probar la API
 
 `http:\\localhost:8080/hola`
+
+##Ejercicio 4
+Diseño de una imagen para utilizar el comando Entrypoint, dependiendo del parámetro pasado en la creación de la imagen obtendremos un mensaje de salida u otro.
+
+Construcción de la imagen 1
+
+`docker run armm_ejercicio4 hola.py`
+
+Construcción de la imágen 2
+
+'docker run armm_ejercicio4 adios.py'
