@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: srv-plex
+  labels:
+    app: srv-plex
+spec:
+  selector:
+    app: srv-plex
+  ports:
+    - protocol: TCP
+      port: 32400
+  type: LoadBalancer

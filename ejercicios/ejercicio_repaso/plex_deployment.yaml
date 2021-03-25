@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srv-plex
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: srv-plex
+  template:
+    metadata:
+      labels:
+        app: srv-plex
+    spec:
+      containers:
+      - name: armm-plex
+        image: linuxserver/plex
+        ports:
+        - containerPort: 32400

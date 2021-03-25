@@ -1,0 +1,28 @@
+version: "2.1"
+services:
+  plex:
+    image: armm_plex:0.0.1
+    container_name: plex
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - /path/to/library:/config
+      - /path/to/tvseries:/tv
+      - /path/to/movies:/movies
+    restart: unless-stopped
+    ports: 
+      - "32400:32400"
+  myvault:
+      image: vault
+      container_name: myvault
+      ports:
+        - "8200:8200"
+      volumes:
+        - ./file:/vault/file:rw
+        - ./vault:/vault/config:rw
+      cap_add:
+        - IPC_LOCK
+      entrypoint: vault server -config=/vault/config/vault.json

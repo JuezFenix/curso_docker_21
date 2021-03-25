@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: armm-plex
+spec:
+  containers:
+  - name: armm-plex
+    image: linuxserver/plex
+    volumeMounts:
+    - name: config-storage
+      mountPath: /config
+    - name: tv-storage
+      mountPath: /tv
+    - name: movies-storage
+      mountPath: /movies
+  volumes:
+  - name: config-storage
+    emptyDir: {}
+  - name: tv-storage
+    emptyDir: {}
+  - name: movies-storage
+    emptyDir: {}

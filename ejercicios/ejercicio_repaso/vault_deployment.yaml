@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srv-vault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: srv-vault
+  template:
+    metadata:
+      labels:
+        app: srv-vault
+    spec:
+      containers:
+      - name: armm-vault
+        image: vault
+        ports:
+        - containerPort: 8200

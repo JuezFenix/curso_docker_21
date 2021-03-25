@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: armm-vault
+spec:
+  containers:
+  - name: armm-vault
+    image: vault
+    env:
+      - name: PUID
+        value: "1000"
+      - name: PGID
+        value: "1000"
+      - name: VERSION
+        value: docker
+    volumeMounts:
+    - name: vault-storage
+      mountPath: /vault/config
+  volumes:
+  - name: vault-storage
+    emptyDir: {}
