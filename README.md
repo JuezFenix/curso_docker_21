@@ -59,6 +59,7 @@ Genarar el deployment para poder generar más de una réplica
 `kubectl apply -f vault/vault_deployment.yaml`
 
 Generar un servicio para publicar nuestro deployment
+
 `kubectl apply -f vault/vault_service.yaml`
 
 Levantar el servicio desde minikube(local)
