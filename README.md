@@ -46,3 +46,21 @@ Construcción de la imagen 1
 Construcción de la imágen 2
 
 'docker run armm_ejercicio4 adios.py'
+
+## Ejercicio repaso
+Permite levantar un servicio de un pod basado en la imagen de Vautl, que nos permitirá almacenar secretos de forma segura.
+
+Generación del pod
+
+`kubectl apply -f vault/vault.yaml`
+
+Genarar el deployment para poder generar más de una réplica
+
+`kubectl apply -f vault/vault_deployment.yaml`
+
+Generar un servicio para publicar nuestro deployment
+`kubectl apply -f vault/vault_service.yaml`
+
+Levantar el servicio desde minikube(local)
+
+`minikube service armm-vault`
